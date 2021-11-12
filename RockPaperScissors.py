@@ -1,5 +1,11 @@
 from random import randint
 
+#Ask user for their name, it will be later displayed if they win saying "Congrats (Entered name). You win!" There is no loop so it will only ask on the initial run
+firstName = input("Hello! What is your name? \n")
+print("Hello " + firstName + "!\n")
+
+
+
 # Set the possibilities of the computer to pick randomly
 y = ["Rock", "Paper", "Scissors"]
 
@@ -26,21 +32,21 @@ while player == False:
              print("Paper covers rock, " + "Computer wins with picking " + computer + '\n')
 
          if computer == "Scissors":
-             print("Rock breaks Scissors, " + computer + " You Win!\n") 
+             print("Rock breaks " + computer + ". Congrats "+ firstName + ", You Win!\n") 
 
     elif player == "Scissors":
         if computer == "Rock":
             print("Rock Breaks scissors, "  + "Computer wins with picking " + computer + '\n') 
 
         if computer == "Paper":
-            print("Scissors cuts " + computer + " You Win!\n") 
+            print("Scissors cuts " + computer + ". Congrats " + firstName + ", You Win!\n") 
 
     elif player == "Paper":
         if computer == "Scissors":
             print("Scissors cuts paper, "  + "Computer wins with picking " + computer + '\n')
 
         if computer == "Rock":
-            print("Paper covers " + computer + " You Win!\n")
+            print("Paper covers " + computer + ". Congrats " + firstName + ", You Win!\n")
 
 
     #Else nothing was selected from the above elif statement, output the below statement
